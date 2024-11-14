@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +9,47 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
+.card {
+  border-radius: 5px;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 300ms, scale 300ms;
 }
-.logo:hover {
+.card:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+  scale: 1.05;
 }
-.logo.react:hover {
+.card.img:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.img {
+  will-change: scale;
+  transition: scale 300ms, border-radius 300ms;
+}
+.img:hover {
+  scale: 1.25;
+  border-radius: 20px;
+}
+/* button {
+  will-change: filter;
+  transition: filter 100ms;
+} */
+/* button:hover {
+  filter: drop-shadow(0 0 1em #646cffaa); */
+/* scale: 1.05; */
+/* } */
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* @keyframes logo-grow {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(1.05);
   }
-}
+  100% {
+    transform: scale(1);
+  } 
+} */
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+/* .logo:hover {
+  animation: logo-grow 1s;
+} */
