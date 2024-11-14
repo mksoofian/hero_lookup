@@ -1,4 +1,3 @@
-import { Spinner } from "@chakra-ui/react";
 import "./App.css";
 import {
   QueryClient,
@@ -87,7 +86,7 @@ function HeroStats() {
     setHeroID(randomNumGenerator());
   };
 
-  if (isPending) return <Spinner size="lg" />;
+  if (isPending) return <p>Loading...</p>;
 
   if (error || hero.response !== "success")
     return <p>Error: {error ? error.message : hero.response}</p>;
