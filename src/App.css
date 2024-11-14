@@ -12,21 +12,21 @@
 .card {
   border-radius: 5px;
   will-change: filter;
-  transition: filter 300ms, scale 300ms;
+  transition: filter 300ms, scale 300ms, border-radius 300ms;
 }
 .card:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
   scale: 1.05;
+  border-radius: 20px;
 }
-.card.img:hover {
+/* .card.img:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 .img {
-  will-change: scale;
-  transition: scale 300ms, border-radius 300ms;
+  will-change: border-radius;
+  transition: border-radius 300ms;
 }
-.img:hover {
-  scale: 1.25;
+.card:hover .img {
   border-radius: 20px;
 }
 /* button {
