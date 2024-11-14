@@ -75,7 +75,7 @@ function HeroStats() {
     queryKey: ["hero"],
     queryFn: async () => {
       const response = await fetch(
-        `https://superheroapi.com/api/5bf23cfc69135a54a7e6ed124672c8fb/${randomNumGenerator()}`
+        `https://superheroapi.com/api.php/5bf23cfc69135a54a7e6ed124672c8fb/${randomNumGenerator()}` // fixed CORS error by adding .php
       );
       return await response.json();
     },
@@ -97,7 +97,7 @@ function HeroStats() {
       <h1>{hero.name}</h1>
       <p>{biography.full_name}</p>
       <img src={image.url} alt={hero.name} />
-      <p>first appeared in {biography.first_appearance} </p>
+      <p>first appeared in </p>
     </div>
   );
 }
