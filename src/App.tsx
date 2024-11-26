@@ -82,8 +82,6 @@ function HeroStats() {
     },
   });
 
-  console.log(hero);
-
   const handleClickNext = () => {
     setHeroID(randomNumGenerator());
   };

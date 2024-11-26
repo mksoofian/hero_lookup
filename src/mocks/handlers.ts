@@ -3,7 +3,7 @@ import { http, HttpResponse } from "msw";
 export const handlers = [
   // Intercept "GET https://example.com/user" requests...
   http.get(
-    "https://superheroapi.com/api.php/5bf23cfc69135a54a7e6ed124672c8fb/1",
+    "https://superheroapi.com/api.php/5bf23cfc69135a54a7e6ed124672c8fb/:id",
     () => {
       // ...and respond to them using this JSON response.
       return HttpResponse.json({
